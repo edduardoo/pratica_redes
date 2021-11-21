@@ -1,0 +1,59 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[portuguese]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{sectsty}
+\usepackage{indentfirst}
+
+\sectionfont{\fontsize{10}{15}\selectfont}
+
+\title{Prática em Protocolos de rede e comunicação}
+
+\author{Paulo Eduardo de Souza Jardim}
+
+\begin{document}
+\maketitle
+
+\begin{large} 
+  Prática realizada como parte do Módulo 2 da disciplina Infraestrutura Computacional, na Especialização em Data Science e Big Data, Universidade Federal do Paraná. Professor Marcus Botacin.
+\end{large} 
+
+\section{Por que “faltam” camadas no roteador e no switch do slide 7?}
+Por causa da função deles, eles atuam apenas nas camadas física, de enlace e, no caso do roteador, também na camada de rede.Não há camada de Aplicação no roteador, por exemplo, porque ele não serve pra navegar na internet ou algo do tipo. Ele pega o dado de um lado e passa para o próximo endereço. 
+
+\section{Por que seu roteador Wi-Fi não é um roteador “de verdade”?}
+Porque ele não apenas dá rotas, mas ele é um servidor DHCP local. Ele é então um ponto de acesso e quando me conecto a esse ponto ele me dá um endereço ip local. 
+
+\section{Qual a porta padrão dos seguintes protocolos: DHCP, HTTPS e POP3.}
+
+\begin{itemize}
+    \item DHCP: 67
+    \item HTTPS: 443
+    \item POP3: 995
+\end{itemize}
+
+\section{Ainda há endereços IPv4 disponíveis no Brasil? Quando esgotaram ou quando esgotarão?}
+De acordo com o site http://ipv6.br/, se esgotaram em 19/08/2020.
+
+
+\section{Qual o ip local da sua máquina? E da macalan?}
+O ip local da minha máquina é 192.168.15.16. O ip da macalan, de acordo com o teste ping é 2801:82:80ff:8001:216:3eff:fe79:6
+
+\section{Qual a rota padrão da sua máquina? E da macalan?}
+Rodando o comando "route PRINT" no Windows, meu Gateway padrão é o 192.168.15.1. Não consegui acesso para rodar na macalan.
+
+\section{Qual o caminho (route) mais comum entre sua máquina e a macalan?}
+A rota começa passando por uns endereços que imagino serem do meu provedor de internet, até chegar no ix de São Paulo (as1916.saopaulo.sp.ix.br [2001:12f8::220:208]) que é um ponto de troca de trafego.
+No fim, chega no ponto de presença da RNP no Paraná, passa pelo roble.c3sl.ufrp.br da UFPR e chega finalmente no macalan (macalan.c3sl.ufpr.br). 
+
+\section{A partir de diferentes máquinas, o caminho (route) até a macalan muda?}
+Não consegui testar de outra máquina mas acredito que muda pois testei algumas vezes da minha máquina e ocorreram rotas diferentes a partir dessa mesma máquina. Em uma delas, a rota não passou pelo ponto de troca de tráfego em São Paulo.
+
+\end{document}
