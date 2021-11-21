@@ -1,0 +1,65 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[portuguese]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{sectsty}
+\usepackage{indentfirst}
+
+\sectionfont{\fontsize{10}{15}\selectfont}
+
+\title{Prática em Redes, Internet e a Web}
+
+\author{Paulo Eduardo de Souza Jardim}
+
+\begin{document}
+\maketitle
+
+\begin{large} 
+  Prática realizada como parte do Módulo 2 da disciplina Infraestrutura Computacional, na Especialização em Data Science e Big Data, Universidade Federal do Paraná. Professor Marcus Botacin.
+\end{large} 
+
+\section{Quais as diferenças na estrutura da rede IPÊ de 2016 (slide 8) para 2020/2021?}
+É possível perceber algums conexões novas entre os nós, como por exemplo, uma conexão de 10Gbps entre Curitiba e Florianópolis, e uma nova conexão de 20Gbps entre Curitiba e São Paulo, além daquela de 10Gbps que já existia entre essas duas capitais.
+Também é possível perceber uma nova conexão internacional do nó que fica no Rio Grande do Sul.
+
+\section{Qual a diferença entre Web e Internet?} 
+
+A Internet é uma rede que conecta computadores do mundo todo. Foi criada no final da década de 60 com a Arpanet nos Estados Unidos. Ela permite que instituições e pessoas se comuniquem transferindo dados, compartilhando arquivos, enviando emails e muito mais, através de protocolos específicos para cada um desses serviços
+
+Já a Web surgiu no fim da década de 80 e início dos anos 90, utilizando-se da Internet pra criar uma rede de páginas de hipertexto (as páginas HTML) que referenciam umas as outras. 
+
+Ou seja, a Web está na Internet, é um subconjunto dela. Posso enviar um email pela Internet sem utilizar a Web.
+Mas quando navego em um site da Web, necessariamente estou utilizando a internet pra baixar o documento HTML para o meu computador.
+
+\section{Quais orgãos administram o ponto br (.br) para além do slide 17?}
+
+\begin{itemize}
+    \item CETIC: Centro Regional de Estudos para o Desenvolvimento da Sociedade da Informação. Monitora a adoção das tecnologias de informação e comunicação (TIC) no Brasil.
+
+    \item CEPTRO: Centro de Estudos e Pesquisas em Tecnologia de Redes e Operações. É responsável por iniciativas e projetos que apoiam ou aperfeiçoam a infraestrutura da Internet no Brasil, contribuindo para seu desenvolvimento.
+
+    \item CEWEB:  Centro de Estudos sobre Tecnologias Web. Tem como objetivos fomentar a inovação na Web, estimular o melhor uso da Web, mostrar o potencial da Web a diversos segmentos da sociedade e contribuir para a evolução da Web.
+
+    \item IX.br: Projeto do Comitê Gestor da Internet no Brasil (CGIbr) que promove e cria a infra-estrutura necessária (Ponto de Intercambio de Internet - IXP) para a interconexão direta entre as redes ("Autonomous Systems" - ASs) que compõem a Internet Brasileira. 
+
+\end{itemize}
+
+\section{Quais características do protocolo HTTP descritas na RFC você já conhecia?}
+
+Por já ter desenvolvido sistemas web, conhecia a ausência de estado entre as chamadas HTTP, algo a ser trabalhado pelo programador através de cookies do lado do cliente e/ou algum gerenciamento de sessão do usuário do lado do servidor. Também conhecia a fato de ser um protocolo genérico, que permite a utilização de seus métodos de chamada e seus códigos de resposta de maneira extremamente flexível para criar aplicações cliente-servidor. 
+
+Ambas as caraterísticas acima estão logo no início da RFC.
+
+\section{Qual o motivo de haver 2 chaves diferentes na figura do slide 32?}
+É porque a figura está representando um modelo de criptografia assimétrica, ou seja, composta por uma chave pública e uma privada. As chaves são diferentes pra trazer uma segurança maior, já que a chave pública pode ser compartilhada com o remetente das mensagens e a chave privada permanece segura com o destinatário da mensagem, de forma que apenas o destinatário consegue decriptar as mensagens que foram encriptadas com sua chave pública.
+
+
+
+\end{document}
