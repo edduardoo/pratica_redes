@@ -1,0 +1,35 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[portuguese]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{sectsty}
+\usepackage{indentfirst}
+
+\sectionfont{\fontsize{10}{15}\selectfont}
+
+\title{Prática em Nuvens computacionais e serviços Web}
+
+\author{Paulo Eduardo de Souza Jardim}
+
+\begin{document}
+\maketitle
+
+\begin{large} 
+  Prática realizada como parte do Módulo 2 da disciplina Infraestrutura Computacional, na Especialização em Data Science e Big Data, Universidade Federal do Paraná. Professor Marcus Botacin.
+\end{large} 
+
+\section{Relatório}
+A aplicação criada é composta por dois serviços: um servidor que expõe uma API simples que retorna um JSON com um nome de um filme e um cliente que consome essa API. 
+
+Esses dois serviços estão sendo disponibilizados em containers, por meio do Docker. O docker-compose garante que o servidor sobe primeiro, disponibilizando a API na porta 8000, que fica receptiva a chamadas http. Logo em seguida, o container do cliente é executado, fazendo uma chamada http ao servidor, recebendo uma string json como resposta, convertendo pra um objeto json e printando o nome do filme. 
+
+A comunicação entre os dois containers é feita por meio de uma rede que o Docker cria. Nesta rede, o Docker se encarrega de criar um servidor DHCP, que fornece IPs internos para os containers e também um servidor DNS que resolve os nomes dos serviços definidos no docker-compose para o IP do container de cada serviço. Por causa disso, quando o cliente faz uma chamada para "http://api:8000/api", o request é capaz de encontrar o container da api.
+
+\end{document}
